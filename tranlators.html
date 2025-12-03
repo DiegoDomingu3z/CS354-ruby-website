@@ -15,23 +15,68 @@
         <div class="container">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="descriptionhistory.html">History</a></li>
                     <li><a href="documentation.html">Documentation</a></li>
-                    <li><a href="tranlators.html">Translators</a></li>
+                    <li><a href="tranlators.html">Interpreters</a></li>
+                    <li><a href="examples.html">Examples</a></li>
                     <li><a href="comparison.html">Comparison</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="content">
+    <section class="interpreters-content">
         <div class="container">
-            <h1>Translators</h1>
+            <h1>Interpreters</h1>
+
+            <h2>Zend Engine</h2>
             <p>
-              	Get plenty of knowledge by our 
-              	wonderful courses.
-          	</p>
+                The <strong>Zend Engine</strong> is the core execution engine of PHP. It converts PHP scripts into Zend bytecode, executes them,
+                manages memory and functions, supports PHP extensions, and integrates with web servers like Apache and Nginx. Zend Engine ensures efficient performance and consistent behavior across platforms.
+            </p>
+
+            <h3>Notable Alternatives:</h3>
+            <ul>
+                <li>
+                    <strong>PeachPie:</strong> A modern PHP compiler based on the Microsoft Roslyn compiler platform
+                    and drawing from the Phalanger project it allows PHP
+                    to be executed within the .NET framework.
+                </li>
+                <li>
+                    <strong>KPHP:</strong> Compiles a limited subset of PHP to a native binary running faster than PHP.
+                </li>
+                <li>
+                    <strong>Quercus:</strong> Java implementation of the PHP language.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="interpreters-content">
+        <div class="container">
+            <h1>PHP Installation Instructions</h1>
+
+            <h2>Windows</h2>
+            <ul>
+                <li>Go to the official PHP site</li>
+                <li>Get the <a href="https://www.php.net/downloads.php" target="_blank">Windows ZIP download</a></li>
+                <li>Follow the <a href="https://www.php.net/manual/en/install.windows.php">Windows instruction manual</a> for further configuration.</li>
+            </ul>
+
+            <h2>macOS</h2>
+            <ul>
+                <li>Install Homebrew if not already installed.</li>
+                <li>Run: <code>brew install php</code></li>
+                <li>Verify installation: <code>php -v</code></li>
+            </ul>
+
+            <h2>Linux</h2>
+            <ul>
+                <li>Update packages: <code>sudo apt update</code></li>
+                <li>Install PHP: <code>sudo apt install php</code></li>
+                <li>Verify installation: <code>php -v</code></li>
+            </ul>
         </div>
     </section>
 
