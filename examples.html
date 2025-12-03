@@ -126,40 +126,22 @@ for($i = 0; $i&lt;20; $i++) {
                 <pre>
         <code>
 &lt;?php
-function fetchRandomMeme(): ?array
+function fetchRandomDogBreed(): ?array
 {
-    $url = 'https://meme-api.com/gimme';
+    $url = "https://dog.ceo/api/breeds/image/random";
 
     $json = @file_get_contents($url);
-    if ($json === false) {
-        return null;
-    }
-
-    $data = json_decode($json, true);
-    if (!is_array($data)) {
-        return null;
-    }
-
-    return $data;
+if ($json === false) {
+    die("Failed to fetch dog image.");
 }
 
-$max   = 5;
-$meme       = null;
-$isSafeMeme = false;
+$data = json_decode($json, true);
 
-for ($i = 0; $i &lt; $max; $i++) {
-    $meme = fetchRandomMeme();
-
-    if ($meme === null) {
-        continue;
-    }
-
-    $isSafeMeme = empty($meme['nsfw']) || $meme['nsfw'] === false;
-
-    if ($isSafeMeme &amp;&amp; !empty($meme['url'])) {
-        break;
-    }
+if (!is_array($data) || empty($data["message"])) {
+    die("Invalid API response.");
 }
+
+$dogImage = $data["message"];
 ?&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
