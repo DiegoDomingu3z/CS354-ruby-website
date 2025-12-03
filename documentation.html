@@ -29,9 +29,56 @@
         <div class="container">
             <h1>Documentation</h1>
             <p>
-              	Get plenty of knowledge by our 
-              	wonderful courses.
+              	Documentation for PHP 8: <a target="_blank" href="https://www.php.net/manual/en/">https://www.php.net/manual/en/</a>
           	</p>
+            <br/>
+            <p>
+                PHP files are naturally HTML files with PHP code embedded in them. All PHP code must be wrapped in <span style="color: rgb(236, 78, 78);">&lt;?php ?&gt;</span> or else it will be rendered as HTML.
+            </p>
+            <p>
+                You can omit the closing tag if the rest of the document is PHP.
+            </p>
+            <br/>
+            <p>
+                PHP, being such a long standing language for running live websites, also has package managers for installing and using resources for and in PHP.
+            </p>
+            <p>
+                <a target="_blank" href="https://pecl.php.net/">PHP Extension Community Library (PECL)</a> (OUTDATED)
+                <br/>
+                <a target="_blank" href="https://github.com/php/pie">PHP Installer for Extensions (PIE)</a>
+                <br/>
+                <a target="_blank" href="https://pear.php.net/">PHP Extension and Application Repository (PEAR)</a>
+                <br/>
+                <a target="_blank" href="https://getcomposer.org/">Composer</a> (Like Rust's Cargo)
+                <br/>
+                <a target="_blank" href="https://packagist.org/">Packagist</a> (Another repository)
+            </p>
+            <br/>
+            <p>
+                Installing PHP on most systems requires a bit of effort, only Windows binaries are provided. Though most package managers will download and build PHP for you which is the point.
+            </p>
+            <p>
+                Unlike other languages, PHP is unique in which it's built to serve from two states.
+            </p>
+            <p>
+                You can execute php scripts from the command line by running <span style="color:rgb(236, 78, 78);">php &lt;filename&gt;</span>
+            </p>
+            <p>
+                Or by running <span style="color:rgb(236, 78, 78);">php -r &lt;php-code&gt;</span>
+            </p>
+            <p>
+                This does not treat all requests like it is servicing a web page, so no headers or extra information get returned.
+            </p>
+            <br/>
+            <p>
+                The other way PHP is serviced is CGI, instead of being treated as a command line program, it instead assumes and treats all incoming and outgoing requests as web requests. This is the version that all websites use.
+            </p>
+            <br/>
+            <p>
+                <a target="_blank" href="https://www.php.net/manual/en/tutorial.useful.php">
+                    Basic PHP coding tutorial
+                </a>
+            </p>
         </div>
     </section>
 
