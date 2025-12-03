@@ -57,3 +57,26 @@ nav {
     padding: 50px 0;
     text-align: center;
 }
+
+/* Interpreter page */
+.interpreters-content p {
+    margin-bottom: 20px; 
+    line-height: 1.5;    
+}
+
+.interpreters-content ul {
+    padding-left: 40px;  
+    margin-bottom: 20px; 
+}
+
+.interpreters-content li {
+    margin-bottom: 12px; 
+}
+
+.interpreters-content h1,
+.interpreters-content h2,
+.interpreters-content h3 {
+    margin-top: 20px;    
+    margin-bottom: 10px; 
+    line-height: 1.5;    
+}
