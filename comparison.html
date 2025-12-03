@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +8,87 @@
     <meta name="viewport" 
           content="width=device-width, initial-scale=1.0">
     <title>Comparison & Features</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" privacy="strict"> 
+
+    <!-- Inline CSS: minimal, non-flashy styling -->
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                "Segoe UI", sans-serif;
+            background-color: #f5f5f7;
+            color: #222;
+        }
+
+    
+
+        .content {
+            padding: 32px 0 48px;
+        }
+
+        .content h1 {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.15);
+            font-size: 0.95rem;
+        }
+
+        thead {
+            background-color: #f3f4f6;
+        }
+
+        th,
+        td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 1.2rem;
+        }
+
+        .comparison-ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 12px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 16px 20px;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.12);
+            font-size: 0.95rem;
+        }
+
+        .comparison-ul li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        } 
+
+        code {
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas,
+                "Liberation Mono", "Courier New", monospace;
+            font-size: 0.9em;
+            background-color: #f3f4f6;
+            padding: 1px 3px;
+            border-radius: 3px;
+        }
+    </style>
 </head>
+
 
 <body>
 
@@ -15,10 +96,11 @@
         <div class="container">
             <nav>
                 <ul class="nav-links">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="descriptionhistory.html">History</a></li>
                     <li><a href="documentation.html">Documentation</a></li>
                     <li><a href="tranlators.html">Translators</a></li>
+                    <li><a href="examples.html">Examples</a></li>
                     <li><a href="comparison.html">Comparison</a></li>
                 </ul>
             </nav>
@@ -27,11 +109,83 @@
 
     <section class="content">
         <div class="container">
-            <h1>Comparison & Details</h1>
-            <p>
-              	Get plenty of knowledge by our 
-              	wonderful courses.
-          	</p>
+            <h1>Comparison &amp; Details</h1>
+
+            <div style="padding-top: 24px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>PHP</th>
+                            <th>Python</th>
+                            <th>JavaScript</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Primary domain</td>
+                            <td>Server-side web, templating, CMS (WordPress, etc.).</td>
+                            <td>General scripting, data/ML, backend APIs.</td>
+                            <td>Browser apps and Node.js servers.</td>
+                        </tr>
+                        <tr>
+                            <td>Syntax style</td>
+                            <td>C-style; <code>$</code>variables; can sit inside HTML with <code>&lt;?php ... ?&gt;</code>.</td>
+                            <td>Indentation defines blocks.</td>
+                            <td>C-style with braces {}; semicolons optional.</td>
+                        </tr>
+                        <tr>
+                            <td>Typing</td>
+                            <td>Dynamic with optional type hints; loose comparisons (<code>"1" == 1</code>).</td>
+                            <td>Dynamic and strong; no silent casts ex: (<code>"1" + 1</code> is an error).</td>
+                            <td>Dynamic and coercive <code>==</code> vs <code>===</code>; TypeScript adds static types.</td>
+                        </tr>
+                        <tr>
+                            <td>Paradigms</td>
+                            <td>Procedural and OOP; some functional helpers.</td>
+                            <td>OOP, functional, scripting.</td>
+                            <td>Prototype based OOP + functional.</td>
+                        </tr>
+                        <tr>
+                            <td>Runtime model</td>
+                            <td>Each HTTP request runs in a fresh PHP worker.</td>
+                            <td>Long running process or script, keeps global state.</td>
+                            <td>Long running VM with an event loop.</td>
+                        </tr>
+                        <tr>
+                           <td>Performance</td>
+                            <td>Fast enough for most web workloads when using opcache/JIT; optimized for request/response cycles.</td>
+                            <td>Interpreted and generally slower than JS/PHP JIT-optimized paths, but perfectly adequate for scripting and I/O-bound applications.</td>
+                            <td>High performance in modern engines, especially for async and I/O-bound operations.</td>
+                        </tr>
+                        <tr>
+                            <td>Concurrency</td>
+                            <td>Many workers; shared state in DB/Redis/cache.</td>
+                            <td>GIL; uses multiprocessing or async frameworks.</td>
+                            <td>Single threaded event loop with promises/async-await.</td>
+                        </tr>
+                        <tr>
+                            <td>Ecosystem focus</td>
+                            <td>Web and CMS; Laravel, WordPress.</td>
+                            <td>Data/ML (NumPy, pandas), scripting, Django/Flask/FastAPI.</td>
+                            <td>Front-end (React, Vue, etc.) and Node.js frameworks.</td>
+                        </tr>
+                        <tr>
+                            <td>Typical use cases</td>
+                            <td>CMS sites, server-rendered pages, REST APIs.</td>
+                            <td>Automation, data pipelines, web backends.</td>
+                            <td>SPAs, realtime apps, Node.js services and tooling.</td>
+                        </tr>
+                        <tr>
+                            <td>Learning curve</td>
+                            <td>Easy to start; modern apps use frameworks and Composer.</td>
+                            <td>Very beginner-friendly and consistent.</td>
+                            <td>Easy to try in browser; and very readable.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
     </section>
 
