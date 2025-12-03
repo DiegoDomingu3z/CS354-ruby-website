@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="descriptionhistory.html">History</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="tranlators.html">Translators</a></li>
+                    <li><a href="examples.html">Examples</a></li>
+                    <li><a href="comparison.html">Comparison</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="container">
+            <h1>Examples</h1>
+            <p>
+                Example 1:
+            </p>
+            <div class="container" style="width:50%;transform:translateX(25%);text-align:left;">
+                <pre><code>
+&lt;?php
+    $title = "The title.";
+    $body = "Content of the body.";
+?&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;&lt;?= $title; ?&gt;&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;
+            &lt;?php echo "Some text, then: $body"; ?&gt;
+        &lt;/p&gt;
+        &lt;?php
+            $random = rand(0,1);
+            if ($random == 1) {
+                echo '&lt;p&gt;Not a link.&lt;/p&gt;';
+            } else {
+                echo '&lt;a href="."&gt;A link.&lt;/a&gt;';
+            }
+        ?&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </div>
+            <p><a target="_blank" href="http://144.24.26.239/354/lily1.php">Example 1</a></p>
+            <br/>
+            <p>
+                Example 2:
+            </p>
+            <div class="container" style="width:50%;transform:translateX(25%);text-align:left;">
+                <pre><code>
+&lt;?php
+function fibonacci($n) {
+	if ($n == 0)
+		return 0;
+	else if ($n == 1)
+		return 1;
+	else
+		return fibonacci($n-1) + fibonacci($n-2);
+}
+for($i = 0; $i&lt;20; $i++) {
+	$value = fibonacci($i);
+	echo &quot;{$value}&lt;br/&gt;&quot;;
+}
+</code></pre>
+            </div>
+            <p><a target="_blank" href="http://144.24.26.239/354/lily2.php">Example 2</a></p>
+            <br/>
+        </div>
+    </section>
+</body>
+
+</html>
